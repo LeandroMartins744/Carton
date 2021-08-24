@@ -1,0 +1,184 @@
+{
+	"info": {
+		"_postman_id": "7c19ac5a-b9b6-483b-b620-8bc018c6110d",
+		"name": "Apresentacao",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SaleInsert",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"client\": {\r\n        \"id\": 4,\r\n        \"name\": \"Fernandinha\",\r\n        \"phone\": \"11944545454\",\r\n        \"cpf\": \"33322252587\"\r\n    },\r\n    \"product\":{\r\n        \"id\": 1,\r\n        \"name\": \"Produto 01\",\r\n        \"description\": \"Produto 01\",\r\n        \"value\": 10.5,\r\n        \"inventory\": 100\r\n    },\r\n    \"carton\":{\r\n        \"id\": 1,\r\n        \"flag\": \"Mastercard\",\r\n        \"name\": \"Leandro S G Soares\",\r\n        \"number\": \"5551222243584321\",\r\n        \"date\": \"10/28\",\r\n        \"code\": \"325\",\r\n        \"limit\": 1352.0\r\n    },\r\n    \"partion\": 3,\r\n    \"name\": \"Leandro S G Soares\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/sale",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sale"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ClientSearchCpf",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/client?cpf=11111111111",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"client"
+					],
+					"query": [
+						{
+							"key": "cpf",
+							"value": "11111111111"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ClientInsert",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"street\": {\r\n        \"cep\": \"093555555\",\r\n        \"street\": \"Rua Casa dela\",\r\n        \"number\": 521,\r\n        \"complement\": \"APTO01\",\r\n        \"district\": \"Centro\",\r\n        \"city\": \"São Paulo\",\r\n        \"state\": \"SP\"\r\n    },\r\n    \"name\": \"321231321321\",\r\n    \"phone\": \"11944545454\",\r\n    \"cpf\": \"33322252587\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/carton",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"carton"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ClientList",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/clientlist",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientlist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ProductList",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ProductInsert",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Produto 055\",\r\n    \"description\": \"Prgfgfdd4\",\r\n    \"value\": 22.99,\r\n    \"inventory\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CartonInsert",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"client\": {\r\n        \"id\": 4,\r\n        \"name\": \"Fernandinha\",\r\n        \"phone\": \"11944545454\",\r\n        \"cpf\": \"33322252587\"\r\n    },\r\n    \"flag\": \"Visa\",\r\n    \"name\": \"Leandro S G Soares\",\r\n    \"number\": \"5551222243584321\",\r\n    \"date\": \"10/28\",\r\n    \"code\": \"325\",\r\n    \"limit\": 2000.0\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/carton",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"carton"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
